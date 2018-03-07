@@ -8,12 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="dem012" />
         <module name="demo01" />
+        <module name="demo02" />
+        <module name="demo03" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="company_fire" target="1.5" />
       <module name="dem012" target="1.5" />
       <module name="demo01" target="1.5" />
+      <module name="demo02" target="1.5" />
+      <module name="demo03" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
