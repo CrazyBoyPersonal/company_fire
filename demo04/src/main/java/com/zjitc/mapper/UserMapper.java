@@ -1,7 +1,6 @@
 package com.zjitc.mapper;
 
 import com.zjitc.pojo.User;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * Create by IntelliJ IDEA
