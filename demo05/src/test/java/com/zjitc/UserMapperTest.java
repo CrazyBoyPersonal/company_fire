@@ -28,8 +28,8 @@ public class UserMapperTest {
   public void findById() {
     User user = userMapper.findById(1);
     Assert.assertEquals(1, user.getId().intValue());
-    Assert.assertEquals(1, user.getAge().intValue());
-    Assert.assertEquals("a",user.getName());
+    Assert.assertEquals(12, user.getAge().intValue());
+    Assert.assertEquals("Kevin",user.getName());
   }
 
 }
