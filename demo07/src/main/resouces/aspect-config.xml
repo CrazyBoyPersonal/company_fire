@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+  <!--<context:component-scan base-package=""-->
+
+  <!-- 定义目标对象 -->
+  <bean name="productDao" class="com.zjitc.p1.obj.A" />
+  <!-- 定义切面 -->
+  <bean name="myAspectXML" class="com.zjitc.p1.AspectDemo" />
+
+  <!-- 配置AOP 切面 -->
+  <aop:config>
+    <aop:aspect ref="myAspectXML">
+      <aop:pointcut id="pointcut" expression="execution(* com.zjitc.p1.obj.A.a()))" />
+      <aop:before method="before" pointcut-ref="pointcut"/>
+    </aop:aspect>
+  </aop:config>
+</beans>
